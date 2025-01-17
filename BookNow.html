@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Majestic Dream Hotel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            height: 80px;
+        }
+
+        .header-text {
+            margin-left: 10px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-text h4 {
+            font-size: 28px;
+            margin: 0;
+        }
+
+        .header-text h3 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #28a745;
+        }
+
+        #booking-section {
+            background-image: url('room.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 20px 50px;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, select, button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        section {
+            padding: 100px 20px 50px;
+        }
+
+        .thank-you-message {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div style="display: flex; align-items: center;">
+            <img class="logo" src="2.png" alt="Hotel Logo">
+            <div class="header-text">
+                <h4>MAJESTIC DREAM</h4>
+                <h3>HOTEL</h3>
+            </div>
+        </div>
+        <nav>
+            <a href="HomePage.html">Home Page</a>
+            <a href="BookNow.html">Book Now</a>
+            <a href="Overview.html">Overview</a>
+            <a href="ContactUs.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Booking Section -->
+    <div id="booking-section">
+        <div class="container">
+            <h1>Hotel Booking Form</h1>
+            <form id="booking-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" name="checkin" required>
+
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkout" name="checkout" required>
+
+                <label for="room-type">Room Type:</label>
+                <select id="room-type" name="room-type" required>
+                    <option value="">Select a Room</option>
+                    <option value="single">Single</option>
+                    <option value="double">Double</option>
+                    <option value="suite">Suite</option>
+                </select>
+
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" name="guests" min="1" max="10" required>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="thank-you-message">
+        <h2>Thank You for Your Booking!</h2>
+        <p>Your booking has been confirmed. Room Type: <span id="selected-room"></span></p>
+        <p>We look forward to welcoming you to Majestic Dream Hotel!</p>
+    </div>
+
+    <script>
+        // Handle form submission
+        const form = document.getElementById('booking-form');
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const roomType = document.getElementById('room-type').value;
+            if (roomType) {
+                document.querySelector('.container').style.display = 'none';
+                document.querySelector('.thank-you-message').style.display = 'block';
+                document.getElementById('selected-room').textContent = roomType.charAt(0).toUpperCase() + roomType.slice(1);
+            }
+        });
+    </script>
+</body>
+</html>

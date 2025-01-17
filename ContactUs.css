@@ -1,0 +1,161 @@
+*
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	z-index: 10;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+	height: 80px;
+}
+
+.header-text {
+	margin-left: 10px;
+	color: white;
+	display: flex;
+	flex-direction: column;
+}
+
+.header-text h4 {
+	font-size: 28px;
+	margin: 0;
+}
+
+.header-text h3 {
+	font-size: 20px;
+	margin: 0;
+}
+
+nav {
+	display: flex;
+	gap: 20px;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	font-size: 18px;
+	transition: color 0.3s;
+}
+
+#header{
+	float:right;
+	margin-left:700px;
+}
+.a{
+	color: whitesmoke;
+	font-family:arial;
+	font-size:15px;
+	margin-right:30px;
+	font-style:italic;
+}
+.a:hover{
+	color: darkturquoise;
+	font-family:red serif;
+	font-size:15px;
+	margin-right:30px;
+	font-style:italic;
+	transition: 2;
+}
+.div1
+{
+	width: 100%;
+	height: 300px;
+	background-color:brown;
+}
+.div1 h4
+{
+	position: relative;
+	top: 180px;
+	left: 30px;
+	color: floralwhite;
+	font-style: italic;
+	font-family: sans-serif;
+
+}
+.div1 h1
+{
+	font-family: sans-serif;
+	position: relative;
+	top: 200px;
+	left: 30px;
+	color: whitesmoke;
+	font-style: italic;
+
+}
+.div3
+{
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+.div4
+{
+	flex-basis: 50%;
+	width: 100%;
+}
+.div4 h1{
+	margin-top: 20px;
+	font-family: cursive;
+	margin-left: 50px;
+}
+.div4 p{
+	margin-top: 20px;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 40px;
+	font-family: initial;
+	color: gray;
+	font-size: 19px;
+	padding: 5px;
+}
+.div4 p:hover{
+	margin-top: 20px;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 40px;
+	font-family: initial;
+	color: gray;
+	font-size: 19px;
+	padding: 5px;
+	color: darkblue;
+	transition: 3;
+}
+.div4 h4
+{
+	margin-top: 20px;
+	margin-left: 50px;
+	color: darkred;
+	font-size: 18px;
+}
+.img
+{
+	margin-top: 40px;
+	margin-left: 30px;
+	width: 750px;
+}
+.div5
+{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	background-color:  #99ccff;
+}
+.div5 i{
+	font-size: 80px;
+	margin-left: 100px;
+	margin-bottom: 15px;
+	color: goldenrod;
+}
